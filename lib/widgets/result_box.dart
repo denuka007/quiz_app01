@@ -33,18 +33,18 @@ class ResultBox extends StatelessWidget {
               ),
               radius: 70.0,
               backgroundColor: result == questionLength / 2
-                  ? Colors.yellow // when the result is half of the questions
+                  ? Colors.yellow
                   : result < questionLength / 2
-                      ? incorrect // when the result is less than half
-                      : correct, // when the result is more than half
+                      ? incorrect
+                      : correct,
             ),
             const SizedBox(height: 20.0),
             Text(
               result == questionLength / 2
-                  ? 'Almost There' // when the result is half of the questions
+                  ? 'Almost There'
                   : result < questionLength / 2
-                      ? 'Try Again ?' // when the result is less than half
-                      : 'Great!', // when the result is more than half
+                      ? 'Try Again ?'
+                      : 'Great!',
               style: const TextStyle(color: neutral),
             ),
             const SizedBox(height: 25.0),

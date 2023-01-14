@@ -1,16 +1,12 @@
-// import the material package
-
 import 'package:flutter/material.dart';
 import '../constants.dart';
-import '../models/question_model.dart'; // our question model
-import '../widgets/question_widget.dart'; // the question widget
+import '../models/question_model.dart';
+import '../widgets/question_widget.dart';
 import '../widgets/next_button.dart';
 import '../widgets/option_card.dart';
 import '../widgets/result_box.dart';
 import '../models/db_connect.dart';
 
-// create the HomeScreen widget
-// I'm taking the Stateful widget because it's going to be our parent widget and all the functions and variables will be in this widget so we will need to change state of our widget.
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -21,6 +17,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   // create an object for Dbconnect
   var db = DBconnect();
+
   // List<Question> _questions = [
   //   Question(
   //     id: '10',
@@ -33,6 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
   //     options: {'50': false, '30': true, '40': false, '10': false},
   //   )
   // ];
+
   late Future _questions;
 
   Future<List<Question>> getData() async {
@@ -219,5 +217,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
-// import this file to our main.dart file

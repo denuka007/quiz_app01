@@ -1,13 +1,11 @@
-// import the material package
 import 'package:flutter/material.dart';
 
-import './screens/home_screen.dart'; // the file we just created.
+import './screens/home_screen.dart';
 
-// run the main method
 void main() {
   // the runAPp method
   runApp(
-    const MyApp(), // we will create this below
+    const MyApp(),
   );
 }
 
@@ -21,7 +19,7 @@ class MyApp extends StatelessWidget {
       // remove the debug banner
       debugShowCheckedModeBanner: false,
       // set a homepage
-      home: HomeScreen(), // we will create this in separate file.
+      home: HomeScreen(),
     );
   }
 }
